@@ -1,0 +1,1204 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD07C4082D734B16000BC9F2 /* MovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C4072D734AE0000BC9F2 /* MovementManager.swift */; };
+		AD07C40A2D734F08000BC9F2 /* FieldManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C4092D734EE7000BC9F2 /* FieldManager.swift */; };
+		AD07C40C2D735BBD000BC9F2 /* PaymentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C40B2D735BB3000BC9F2 /* PaymentManager.swift */; };
+		AD07C40E2D735E0A000BC9F2 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C40D2D735E00000BC9F2 /* AlertManager.swift */; };
+		AD07C4102D735FD3000BC9F2 /* AuctionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C40F2D735FCC000BC9F2 /* AuctionManager.swift */; };
+		AD07C4122D736F3D000BC9F2 /* TradeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD07C4112D736F3B000BC9F2 /* TradeManager.swift */; };
+		AD0C183A2D5634CF000390F1 /* TradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0C18392D5634CF000390F1 /* TradeView.swift */; };
+		AD1A75802D75E6FF003A1C99 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A757F2D75E6F8003A1C99 /* LobbyViewController.swift */; };
+		AD1A75822D75FD2E003A1C99 /* LobbyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75812D75FD2A003A1C99 /* LobbyModel.swift */; };
+		AD1A75842D761257003A1C99 /* LobbyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75832D761250003A1C99 /* LobbyCoordinator.swift */; };
+		AD1A75862D761344003A1C99 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75852D761343003A1C99 /* BaseCoordinator.swift */; };
+		AD1A75882D7614F4003A1C99 /* LobbyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75872D7614EA003A1C99 /* LobbyFactory.swift */; };
+		AD1A75902D7627D6003A1C99 /* Money.json in Resources */ = {isa = PBXBuildFile; fileRef = AD1A758F2D7627D6003A1C99 /* Money.json */; };
+		AD1A75922D762930003A1C99 /* WaitingRoomPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75912D76292E003A1C99 /* WaitingRoomPresenter.swift */; };
+		AD1A75942D762949003A1C99 /* WaitingRoomInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75932D762943003A1C99 /* WaitingRoomInteractor.swift */; };
+		AD1A75962D762972003A1C99 /* WaitingRoomCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75952D76296A003A1C99 /* WaitingRoomCoordinator.swift */; };
+		AD1A75982D762983003A1C99 /* WaitingRoomFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75972D76297E003A1C99 /* WaitingRoomFactory.swift */; };
+		AD1A759A2D76299F003A1C99 /* WaitingRoomAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A75992D76299B003A1C99 /* WaitingRoomAssembly.swift */; };
+		AD1A759C2D762A97003A1C99 /* WaitingRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1A759B2D762A94003A1C99 /* WaitingRoomModel.swift */; };
+		AD2E3ED02D53C87000E6794A /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E3ECF2D53C87000E6794A /* GamePresenter.swift */; };
+		AD2E3ED22D53C87F00E6794A /* GameInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E3ED12D53C87F00E6794A /* GameInteractor.swift */; };
+		AD2E3ED62D53C8CE00E6794A /* GameAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E3ED52D53C8CE00E6794A /* GameAssembly.swift */; };
+		AD2E3ED82D53C93800E6794A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E3ED72D53C93800E6794A /* GameModel.swift */; };
+		AD2E3EE22D54189100E6794A /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2E3EE12D54189100E6794A /* PlayerCell.swift */; };
+		AD5275862D74C94400703A15 /* StreetsLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5275852D74C94200703A15 /* StreetsLeftView.swift */; };
+		AD5275882D74E5B000703A15 /* EndGameScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5275872D74E5A600703A15 /* EndGameScreen.swift */; };
+		AD547BA52D750322004778A5 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = AD547BA42D750322004778A5 /* Lottie */; };
+		AD547BAB2D750409004778A5 /* Animation.json in Resources */ = {isa = PBXBuildFile; fileRef = AD547BAA2D750409004778A5 /* Animation.json */; };
+		AD547BAF2D75080D004778A5 /* Fox.json in Resources */ = {isa = PBXBuildFile; fileRef = AD547BAE2D75080D004778A5 /* Fox.json */; };
+		AD547BB22D750B9D004778A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD547BB12D750B9D004778A5 /* LaunchScreen.storyboard */; };
+		AD58A1932D56A76C005A4E16 /* PlayerTradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58A1922D56A76C005A4E16 /* PlayerTradeView.swift */; };
+		AD58A1952D56A961005A4E16 /* PropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD58A1942D56A961005A4E16 /* PropertyCell.swift */; };
+		AD5D041D2D75D73C00229869 /* LobbyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D041C2D75D73600229869 /* LobbyInteractor.swift */; };
+		AD5D041F2D75D74400229869 /* LobbyPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D041E2D75D73F00229869 /* LobbyPresenter.swift */; };
+		AD5D04212D75D74C00229869 /* LobbyAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5D04202D75D74600229869 /* LobbyAssembly.swift */; };
+		AD5E75172D52124300831BBD /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = AD5E75162D52124300831BBD /* GoogleSignIn */; };
+		AD5E75192D52124300831BBD /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AD5E75182D52124300831BBD /* GoogleSignInSwift */; };
+		AD5E751B2D52139500831BBD /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E751A2D52139500831BBD /* AuthManager.swift */; };
+		AD5E751F2D52192C00831BBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD5E751E2D52192C00831BBD /* GoogleService-Info.plist */; };
+		AD5E75232D521E6E00831BBD /* WaitingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E75222D521E6E00831BBD /* WaitingRoomViewController.swift */; };
+		AD5E75292D52C91A00831BBD /* StreetsRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E75282D52C91A00831BBD /* StreetsRightView.swift */; };
+		AD5E752B2D52CAEE00831BBD /* StreetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E752A2D52CAEE00831BBD /* StreetsView.swift */; };
+		AD5E752D2D52CD2700831BBD /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E752C2D52CD2700831BBD /* BoardView.swift */; };
+		AD5E752F2D52CDD600831BBD /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E752E2D52CDD600831BBD /* SquareView.swift */; };
+		AD5E75312D52CF7400831BBD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5E75302D52CF7400831BBD /* Extensions.swift */; };
+		AD61AF202D5BE4FE00DA78AA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF1F2D5BE4FE00DA78AA /* Player.swift */; };
+		AD61AF222D5BE52900DA78AA /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF212D5BE52900DA78AA /* Property.swift */; };
+		AD61AF242D5BE56F00DA78AA /* PropertyType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF232D5BE56F00DA78AA /* PropertyType.swift */; };
+		AD61AF292D5BE83400DA78AA /* DiceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF282D5BE83400DA78AA /* DiceService.swift */; };
+		AD61AF2B2D5BE86800DA78AA /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF2A2D5BE86800DA78AA /* PlayerManager.swift */; };
+		AD61AF2D2D5BE8A500DA78AA /* PropertyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD61AF2C2D5BE8A500DA78AA /* PropertyManager.swift */; };
+		AD7897ED2D64C6D90047ED7A /* FirebaseDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7897EC2D64C6CD0047ED7A /* FirebaseDatabaseManager.swift */; };
+		AD899E6A2D5FC82D00EA2255 /* TradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD899E692D5FC82100EA2255 /* TradeViewModel.swift */; };
+		AD899E6C2D5FE67400EA2255 /* ChanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD899E6B2D5FE66F00EA2255 /* ChanceModel.swift */; };
+		AD899E6E2D5FE7A100EA2255 /* ChanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD899E6D2D5FE79F00EA2255 /* ChanceManager.swift */; };
+		ADA3ED6E2D51666F009DD046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED6D2D51666F009DD046 /* AppDelegate.swift */; };
+		ADA3ED702D51666F009DD046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED6F2D51666F009DD046 /* SceneDelegate.swift */; };
+		ADA3ED782D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED762D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodeld */; };
+		ADA3ED7A2D516670009DD046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA3ED792D516670009DD046 /* Assets.xcassets */; };
+		ADA3ED882D516670009DD046 /* Fox_Monopoly_OnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED872D516670009DD046 /* Fox_Monopoly_OnlineTests.swift */; };
+		ADA3ED922D516670009DD046 /* Fox_Monopoly_OnlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED912D516670009DD046 /* Fox_Monopoly_OnlineUITests.swift */; };
+		ADA3ED942D516670009DD046 /* Fox_Monopoly_OnlineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3ED932D516670009DD046 /* Fox_Monopoly_OnlineUITestsLaunchTests.swift */; };
+		ADA3EDA42D516784009DD046 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = ADA3EDA32D516784009DD046 /* FirebaseAuth */; };
+		ADA3EDA62D516784009DD046 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = ADA3EDA52D516784009DD046 /* FirebaseCore */; };
+		ADA3EDA82D516784009DD046 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = ADA3EDA72D516784009DD046 /* FirebaseDatabase */; };
+		ADA3EDAA2D516924009DD046 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = ADA3EDA92D516924009DD046 /* FirebaseFirestore */; };
+		ADA3EDAC2D516924009DD046 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = ADA3EDAB2D516924009DD046 /* FirebaseStorage */; };
+		ADA3EDAE2D5169A8009DD046 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA3EDAD2D5169A8009DD046 /* GameViewController.swift */; };
+		ADAF62C32D5A35AB0006F2BB /* ProposalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF62C22D5A35AB0006F2BB /* ProposalViewController.swift */; };
+		ADAF62C52D5A6FED0006F2BB /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADAF62C42D5A6FED0006F2BB /* AlertView.swift */; };
+		ADB0360F2D7BAE0A001A046D /* SelfSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0360E2D7BAE08001A046D /* SelfSizingTableView.swift */; };
+		ADB036112D7BAE69001A046D /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB036102D7BAE67001A046D /* ActionButton.swift */; };
+		ADB036132D7BAF0E001A046D /* PropertyTradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB036122D7BAF0D001A046D /* PropertyTradeCell.swift */; };
+		ADB036152D7BB033001A046D /* TradeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB036142D7BB031001A046D /* TradeSectionView.swift */; };
+		ADBCBDCA2D77544000EEF82F /* LobbyErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDC92D77543C00EEF82F /* LobbyErrors.swift */; };
+		ADBCBDCD2D7760C000EEF82F /* DependenciesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDCC2D7760B400EEF82F /* DependenciesAssembly.swift */; };
+		ADBCBDD12D77760B00EEF82F /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDD02D77760500EEF82F /* GameCoordinator.swift */; };
+		ADBCBDD32D7776D100EEF82F /* GameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDD22D7776CB00EEF82F /* GameFactory.swift */; };
+		ADBCBDD52D777C0000EEF82F /* GameErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDD42D777BFB00EEF82F /* GameErrors.swift */; };
+		ADBCBDE42D77AE6100EEF82F /* GameViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDE32D77AE5E00EEF82F /* GameViewProtocol.swift */; };
+		ADBCBDE62D77B07A00EEF82F /* GamePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBCBDE52D77B07400EEF82F /* GamePresenterProtocol.swift */; };
+		ADC5996E2D7F881F00027A12 /* FirebaseErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC5996D2D7F881200027A12 /* FirebaseErrors.swift */; };
+		ADC599712D7F8CF700027A12 /* FirebaseDatabaseManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC599702D7F8CF600027A12 /* FirebaseDatabaseManagerProtocol.swift */; };
+		ADC599732D7F94B000027A12 /* GameInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC599722D7F94AD00027A12 /* GameInteractorProtocol.swift */; };
+		ADE8EF7B2D7C9E2700E9F914 /* MoneyInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF7A2D7C9E2500E9F914 /* MoneyInputView.swift */; };
+		ADE8EF7D2D7C9EDD00E9F914 /* PropertiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF7C2D7C9ED300E9F914 /* PropertiesTableView.swift */; };
+		ADE8EF822D7CCD1600E9F914 /* LogTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF812D7CCD1500E9F914 /* LogTableView.swift */; };
+		ADE8EF842D7CCD5000E9F914 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF832D7CCD4E00E9F914 /* LogCell.swift */; };
+		ADE8EF862D7CCD7900E9F914 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF852D7CCD7700E9F914 /* LogManager.swift */; };
+		ADE8EF8F2D7CEBE000E9F914 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF8E2D7CEBDA00E9F914 /* DataSource.swift */; };
+		ADE8EF912D7DD90D00E9F914 /* PositioningService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE8EF902D7DD90A00E9F914 /* PositioningService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADA3ED842D516670009DD046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA3ED622D51666F009DD046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA3ED692D51666F009DD046;
+			remoteInfo = "Fox Monopoly Online";
+		};
+		ADA3ED8E2D516670009DD046 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADA3ED622D51666F009DD046 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADA3ED692D51666F009DD046;
+			remoteInfo = "Fox Monopoly Online";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD547BA92D750333004778A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AD07C4072D734AE0000BC9F2 /* MovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementManager.swift; sourceTree = "<group>"; };
+		AD07C4092D734EE7000BC9F2 /* FieldManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldManager.swift; sourceTree = "<group>"; };
+		AD07C40B2D735BB3000BC9F2 /* PaymentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentManager.swift; sourceTree = "<group>"; };
+		AD07C40D2D735E00000BC9F2 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		AD07C40F2D735FCC000BC9F2 /* AuctionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionManager.swift; sourceTree = "<group>"; };
+		AD07C4112D736F3B000BC9F2 /* TradeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeManager.swift; sourceTree = "<group>"; };
+		AD0C18392D5634CF000390F1 /* TradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeView.swift; sourceTree = "<group>"; };
+		AD1A757F2D75E6F8003A1C99 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		AD1A75812D75FD2A003A1C99 /* LobbyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyModel.swift; sourceTree = "<group>"; };
+		AD1A75832D761250003A1C99 /* LobbyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyCoordinator.swift; sourceTree = "<group>"; };
+		AD1A75852D761343003A1C99 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		AD1A75872D7614EA003A1C99 /* LobbyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyFactory.swift; sourceTree = "<group>"; };
+		AD1A758F2D7627D6003A1C99 /* Money.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Money.json; sourceTree = "<group>"; };
+		AD1A75912D76292E003A1C99 /* WaitingRoomPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomPresenter.swift; sourceTree = "<group>"; };
+		AD1A75932D762943003A1C99 /* WaitingRoomInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomInteractor.swift; sourceTree = "<group>"; };
+		AD1A75952D76296A003A1C99 /* WaitingRoomCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomCoordinator.swift; sourceTree = "<group>"; };
+		AD1A75972D76297E003A1C99 /* WaitingRoomFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomFactory.swift; sourceTree = "<group>"; };
+		AD1A75992D76299B003A1C99 /* WaitingRoomAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomAssembly.swift; sourceTree = "<group>"; };
+		AD1A759B2D762A94003A1C99 /* WaitingRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomModel.swift; sourceTree = "<group>"; };
+		AD2E3ECF2D53C87000E6794A /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		AD2E3ED12D53C87F00E6794A /* GameInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractor.swift; sourceTree = "<group>"; };
+		AD2E3ED52D53C8CE00E6794A /* GameAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembly.swift; sourceTree = "<group>"; };
+		AD2E3ED72D53C93800E6794A /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		AD2E3EE12D54189100E6794A /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		AD5275852D74C94200703A15 /* StreetsLeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetsLeftView.swift; sourceTree = "<group>"; };
+		AD5275872D74E5A600703A15 /* EndGameScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameScreen.swift; sourceTree = "<group>"; };
+		AD547BAA2D750409004778A5 /* Animation.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Animation.json; sourceTree = "<group>"; };
+		AD547BAE2D75080D004778A5 /* Fox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Fox.json; sourceTree = "<group>"; };
+		AD547BB12D750B9D004778A5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AD58A1922D56A76C005A4E16 /* PlayerTradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTradeView.swift; sourceTree = "<group>"; };
+		AD58A1942D56A961005A4E16 /* PropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCell.swift; sourceTree = "<group>"; };
+		AD5D041C2D75D73600229869 /* LobbyInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyInteractor.swift; sourceTree = "<group>"; };
+		AD5D041E2D75D73F00229869 /* LobbyPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyPresenter.swift; sourceTree = "<group>"; };
+		AD5D04202D75D74600229869 /* LobbyAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyAssembly.swift; sourceTree = "<group>"; };
+		AD5E751A2D52139500831BBD /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AD5E751E2D52192C00831BBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AD5E75222D521E6E00831BBD /* WaitingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoomViewController.swift; sourceTree = "<group>"; };
+		AD5E75282D52C91A00831BBD /* StreetsRightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetsRightView.swift; sourceTree = "<group>"; };
+		AD5E752A2D52CAEE00831BBD /* StreetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreetsView.swift; sourceTree = "<group>"; };
+		AD5E752C2D52CD2700831BBD /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		AD5E752E2D52CDD600831BBD /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		AD5E75302D52CF7400831BBD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD61AF1F2D5BE4FE00DA78AA /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		AD61AF212D5BE52900DA78AA /* Property.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Property.swift; sourceTree = "<group>"; };
+		AD61AF232D5BE56F00DA78AA /* PropertyType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyType.swift; sourceTree = "<group>"; };
+		AD61AF282D5BE83400DA78AA /* DiceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceService.swift; sourceTree = "<group>"; };
+		AD61AF2A2D5BE86800DA78AA /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		AD61AF2C2D5BE8A500DA78AA /* PropertyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyManager.swift; sourceTree = "<group>"; };
+		AD7897EC2D64C6CD0047ED7A /* FirebaseDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManager.swift; sourceTree = "<group>"; };
+		AD899E692D5FC82100EA2255 /* TradeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeViewModel.swift; sourceTree = "<group>"; };
+		AD899E6B2D5FE66F00EA2255 /* ChanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanceModel.swift; sourceTree = "<group>"; };
+		AD899E6D2D5FE79F00EA2255 /* ChanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChanceManager.swift; sourceTree = "<group>"; };
+		ADA3ED6A2D51666F009DD046 /* Fox Monopoly Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fox Monopoly Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA3ED6D2D51666F009DD046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADA3ED6F2D51666F009DD046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ADA3ED772D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Fox_Monopoly_Online.xcdatamodel; sourceTree = "<group>"; };
+		ADA3ED792D516670009DD046 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA3ED7E2D516670009DD046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADA3ED832D516670009DD046 /* Fox Monopoly OnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fox Monopoly OnlineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA3ED872D516670009DD046 /* Fox_Monopoly_OnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox_Monopoly_OnlineTests.swift; sourceTree = "<group>"; };
+		ADA3ED8D2D516670009DD046 /* Fox Monopoly OnlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fox Monopoly OnlineUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA3ED912D516670009DD046 /* Fox_Monopoly_OnlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox_Monopoly_OnlineUITests.swift; sourceTree = "<group>"; };
+		ADA3ED932D516670009DD046 /* Fox_Monopoly_OnlineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fox_Monopoly_OnlineUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ADA3EDAD2D5169A8009DD046 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ADAF62C22D5A35AB0006F2BB /* ProposalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProposalViewController.swift; sourceTree = "<group>"; };
+		ADAF62C42D5A6FED0006F2BB /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		ADB0360E2D7BAE08001A046D /* SelfSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfSizingTableView.swift; sourceTree = "<group>"; };
+		ADB036102D7BAE67001A046D /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		ADB036122D7BAF0D001A046D /* PropertyTradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyTradeCell.swift; sourceTree = "<group>"; };
+		ADB036142D7BB031001A046D /* TradeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeSectionView.swift; sourceTree = "<group>"; };
+		ADBCBDC92D77543C00EEF82F /* LobbyErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyErrors.swift; sourceTree = "<group>"; };
+		ADBCBDCC2D7760B400EEF82F /* DependenciesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependenciesAssembly.swift; sourceTree = "<group>"; };
+		ADBCBDD02D77760500EEF82F /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
+		ADBCBDD22D7776CB00EEF82F /* GameFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFactory.swift; sourceTree = "<group>"; };
+		ADBCBDD42D777BFB00EEF82F /* GameErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameErrors.swift; sourceTree = "<group>"; };
+		ADBCBDE32D77AE5E00EEF82F /* GameViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewProtocol.swift; sourceTree = "<group>"; };
+		ADBCBDE52D77B07400EEF82F /* GamePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenterProtocol.swift; sourceTree = "<group>"; };
+		ADC5996D2D7F881200027A12 /* FirebaseErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseErrors.swift; sourceTree = "<group>"; };
+		ADC599702D7F8CF600027A12 /* FirebaseDatabaseManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDatabaseManagerProtocol.swift; sourceTree = "<group>"; };
+		ADC599722D7F94AD00027A12 /* GameInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorProtocol.swift; sourceTree = "<group>"; };
+		ADE8EF7A2D7C9E2500E9F914 /* MoneyInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyInputView.swift; sourceTree = "<group>"; };
+		ADE8EF7C2D7C9ED300E9F914 /* PropertiesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesTableView.swift; sourceTree = "<group>"; };
+		ADE8EF812D7CCD1500E9F914 /* LogTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableView.swift; sourceTree = "<group>"; };
+		ADE8EF832D7CCD4E00E9F914 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		ADE8EF852D7CCD7700E9F914 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
+		ADE8EF8E2D7CEBDA00E9F914 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		ADE8EF902D7DD90A00E9F914 /* PositioningService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositioningService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADA3ED672D51666F009DD046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA3EDA82D516784009DD046 /* FirebaseDatabase in Frameworks */,
+				ADA3EDAA2D516924009DD046 /* FirebaseFirestore in Frameworks */,
+				AD5E75192D52124300831BBD /* GoogleSignInSwift in Frameworks */,
+				ADA3EDA62D516784009DD046 /* FirebaseCore in Frameworks */,
+				ADA3EDAC2D516924009DD046 /* FirebaseStorage in Frameworks */,
+				ADA3EDA42D516784009DD046 /* FirebaseAuth in Frameworks */,
+				AD5E75172D52124300831BBD /* GoogleSignIn in Frameworks */,
+				AD547BA52D750322004778A5 /* Lottie in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED802D516670009DD046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED8A2D516670009DD046 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD1A758D2D761DF8003A1C99 /* Lobby */ = {
+			isa = PBXGroup;
+			children = (
+				AD5D041C2D75D73600229869 /* LobbyInteractor.swift */,
+				AD5D041E2D75D73F00229869 /* LobbyPresenter.swift */,
+				AD5D04202D75D74600229869 /* LobbyAssembly.swift */,
+				AD1A757F2D75E6F8003A1C99 /* LobbyViewController.swift */,
+				AD1A75812D75FD2A003A1C99 /* LobbyModel.swift */,
+				AD1A75832D761250003A1C99 /* LobbyCoordinator.swift */,
+				AD1A75872D7614EA003A1C99 /* LobbyFactory.swift */,
+			);
+			path = Lobby;
+			sourceTree = "<group>";
+		};
+		AD1A758E2D761DFF003A1C99 /* WaitingRoom */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A759B2D762A94003A1C99 /* WaitingRoomModel.swift */,
+				AD1A75992D76299B003A1C99 /* WaitingRoomAssembly.swift */,
+				AD1A75972D76297E003A1C99 /* WaitingRoomFactory.swift */,
+				AD1A75952D76296A003A1C99 /* WaitingRoomCoordinator.swift */,
+				AD1A75932D762943003A1C99 /* WaitingRoomInteractor.swift */,
+				AD1A75912D76292E003A1C99 /* WaitingRoomPresenter.swift */,
+				AD5E75222D521E6E00831BBD /* WaitingRoomViewController.swift */,
+			);
+			path = WaitingRoom;
+			sourceTree = "<group>";
+		};
+		AD2E3ECE2D53C85000E6794A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				ADE8EF922D7E323E00E9F914 /* EndGame */,
+				ADBCBDCF2D776CAC00EEF82F /* VIP */,
+				AD58A18D2D56A6D1005A4E16 /* Views */,
+				AD61AF1E2D5BE4DF00DA78AA /* Models */,
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		AD547BB02D750B58004778A5 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		AD58A18D2D56A6D1005A4E16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADBCBDCE2D776A5100EEF82F /* PlayersCollection */,
+				ADE8EF872D7CD48C00E9F914 /* Log */,
+				AD899E682D5F9E0000EA2255 /* AlertView */,
+				AD58A1902D56A719005A4E16 /* Trading */,
+				AD58A18F2D56A701005A4E16 /* Board */,
+				AD58A18E2D56A6E8005A4E16 /* Streets */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD58A18E2D56A6E8005A4E16 /* Streets */ = {
+			isa = PBXGroup;
+			children = (
+				AD5275852D74C94200703A15 /* StreetsLeftView.swift */,
+				AD5E752E2D52CDD600831BBD /* SquareView.swift */,
+				AD5E75282D52C91A00831BBD /* StreetsRightView.swift */,
+				AD5E752A2D52CAEE00831BBD /* StreetsView.swift */,
+			);
+			path = Streets;
+			sourceTree = "<group>";
+		};
+		AD58A18F2D56A701005A4E16 /* Board */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E752C2D52CD2700831BBD /* BoardView.swift */,
+			);
+			path = Board;
+			sourceTree = "<group>";
+		};
+		AD58A1902D56A719005A4E16 /* Trading */ = {
+			isa = PBXGroup;
+			children = (
+				AD899E692D5FC82100EA2255 /* TradeViewModel.swift */,
+				ADE8EF7E2D7C9F2100E9F914 /* TradingElements */,
+				ADB0360D2D7BADCA001A046D /* ProposalElements */,
+			);
+			path = Trading;
+			sourceTree = "<group>";
+		};
+		AD58A1912D56A735005A4E16 /* StartGame */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A758E2D761DFF003A1C99 /* WaitingRoom */,
+				AD1A758D2D761DF8003A1C99 /* Lobby */,
+			);
+			path = StartGame;
+			sourceTree = "<group>";
+		};
+		AD5E75272D52C8E400831BBD /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				ADBCBDCB2D775D6800EEF82F /* AnimationsJSON */,
+				AD5E75302D52CF7400831BBD /* Extensions.swift */,
+				AD1A75852D761343003A1C99 /* BaseCoordinator.swift */,
+				AD547BB12D750B9D004778A5 /* LaunchScreen.storyboard */,
+				ADA3ED792D516670009DD046 /* Assets.xcassets */,
+				AD5E751E2D52192C00831BBD /* GoogleService-Info.plist */,
+				ADA3ED762D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodeld */,
+				ADA3ED6D2D51666F009DD046 /* AppDelegate.swift */,
+				ADA3ED6F2D51666F009DD046 /* SceneDelegate.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		AD61AF1E2D5BE4DF00DA78AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD899E6B2D5FE66F00EA2255 /* ChanceModel.swift */,
+				AD61AF1F2D5BE4FE00DA78AA /* Player.swift */,
+				AD61AF212D5BE52900DA78AA /* Property.swift */,
+				AD61AF232D5BE56F00DA78AA /* PropertyType.swift */,
+				AD2E3ED72D53C93800E6794A /* GameModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AD61AF252D5BE79800DA78AA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5996F2D7F8CE600027A12 /* Protocols */,
+				ADBCBDCC2D7760B400EEF82F /* DependenciesAssembly.swift */,
+				AD07C40F2D735FCC000BC9F2 /* AuctionManager.swift */,
+				AD07C40D2D735E00000BC9F2 /* AlertManager.swift */,
+				AD07C40B2D735BB3000BC9F2 /* PaymentManager.swift */,
+				AD07C4092D734EE7000BC9F2 /* FieldManager.swift */,
+				AD07C4072D734AE0000BC9F2 /* MovementManager.swift */,
+				AD7897EC2D64C6CD0047ED7A /* FirebaseDatabaseManager.swift */,
+				AD899E6D2D5FE79F00EA2255 /* ChanceManager.swift */,
+				AD61AF282D5BE83400DA78AA /* DiceService.swift */,
+				AD61AF2A2D5BE86800DA78AA /* PlayerManager.swift */,
+				AD61AF2C2D5BE8A500DA78AA /* PropertyManager.swift */,
+				AD07C4112D736F3B000BC9F2 /* TradeManager.swift */,
+				AD5E751A2D52139500831BBD /* AuthManager.swift */,
+				ADE8EF902D7DD90A00E9F914 /* PositioningService.swift */,
+				ADE8EF852D7CCD7700E9F914 /* LogManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AD899E682D5F9E0000EA2255 /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				ADAF62C42D5A6FED0006F2BB /* AlertView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		ADA3ED612D51666F009DD046 = {
+			isa = PBXGroup;
+			children = (
+				ADA3ED6C2D51666F009DD046 /* Fox Monopoly Online */,
+				ADA3ED862D516670009DD046 /* Fox Monopoly OnlineTests */,
+				ADA3ED902D516670009DD046 /* Fox Monopoly OnlineUITests */,
+				ADA3ED6B2D51666F009DD046 /* Products */,
+				AD547BB02D750B58004778A5 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		ADA3ED6B2D51666F009DD046 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADA3ED6A2D51666F009DD046 /* Fox Monopoly Online.app */,
+				ADA3ED832D516670009DD046 /* Fox Monopoly OnlineTests.xctest */,
+				ADA3ED8D2D516670009DD046 /* Fox Monopoly OnlineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADA3ED6C2D51666F009DD046 /* Fox Monopoly Online */ = {
+			isa = PBXGroup;
+			children = (
+				ADBCBDC82D77543200EEF82F /* Errors */,
+				AD61AF252D5BE79800DA78AA /* Services */,
+				AD58A1912D56A735005A4E16 /* StartGame */,
+				AD2E3ECE2D53C85000E6794A /* Game */,
+				ADA3ED7E2D516670009DD046 /* Info.plist */,
+				AD5E75272D52C8E400831BBD /* Basic */,
+			);
+			path = "Fox Monopoly Online";
+			sourceTree = "<group>";
+		};
+		ADA3ED862D516670009DD046 /* Fox Monopoly OnlineTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA3ED872D516670009DD046 /* Fox_Monopoly_OnlineTests.swift */,
+			);
+			path = "Fox Monopoly OnlineTests";
+			sourceTree = "<group>";
+		};
+		ADA3ED902D516670009DD046 /* Fox Monopoly OnlineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADA3ED912D516670009DD046 /* Fox_Monopoly_OnlineUITests.swift */,
+				ADA3ED932D516670009DD046 /* Fox_Monopoly_OnlineUITestsLaunchTests.swift */,
+			);
+			path = "Fox Monopoly OnlineUITests";
+			sourceTree = "<group>";
+		};
+		ADB0360D2D7BADCA001A046D /* ProposalElements */ = {
+			isa = PBXGroup;
+			children = (
+				ADAF62C22D5A35AB0006F2BB /* ProposalViewController.swift */,
+				ADB036142D7BB031001A046D /* TradeSectionView.swift */,
+				ADB036122D7BAF0D001A046D /* PropertyTradeCell.swift */,
+				ADB036102D7BAE67001A046D /* ActionButton.swift */,
+				ADB0360E2D7BAE08001A046D /* SelfSizingTableView.swift */,
+			);
+			path = ProposalElements;
+			sourceTree = "<group>";
+		};
+		ADBCBDC82D77543200EEF82F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				ADC5996D2D7F881200027A12 /* FirebaseErrors.swift */,
+				ADBCBDD42D777BFB00EEF82F /* GameErrors.swift */,
+				ADBCBDC92D77543C00EEF82F /* LobbyErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		ADBCBDCB2D775D6800EEF82F /* AnimationsJSON */ = {
+			isa = PBXGroup;
+			children = (
+				AD1A758F2D7627D6003A1C99 /* Money.json */,
+				AD547BAA2D750409004778A5 /* Animation.json */,
+				AD547BAE2D75080D004778A5 /* Fox.json */,
+			);
+			path = AnimationsJSON;
+			sourceTree = "<group>";
+		};
+		ADBCBDCE2D776A5100EEF82F /* PlayersCollection */ = {
+			isa = PBXGroup;
+			children = (
+				AD2E3EE12D54189100E6794A /* PlayerCell.swift */,
+				ADE8EF8E2D7CEBDA00E9F914 /* DataSource.swift */,
+			);
+			path = PlayersCollection;
+			sourceTree = "<group>";
+		};
+		ADBCBDCF2D776CAC00EEF82F /* VIP */ = {
+			isa = PBXGroup;
+			children = (
+				ADBCBDE22D77AE4F00EEF82F /* Protocols */,
+				ADBCBDD22D7776CB00EEF82F /* GameFactory.swift */,
+				ADBCBDD02D77760500EEF82F /* GameCoordinator.swift */,
+				ADA3EDAD2D5169A8009DD046 /* GameViewController.swift */,
+				AD2E3ECF2D53C87000E6794A /* GamePresenter.swift */,
+				AD2E3ED12D53C87F00E6794A /* GameInteractor.swift */,
+				AD2E3ED52D53C8CE00E6794A /* GameAssembly.swift */,
+			);
+			path = VIP;
+			sourceTree = "<group>";
+		};
+		ADBCBDE22D77AE4F00EEF82F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ADC599722D7F94AD00027A12 /* GameInteractorProtocol.swift */,
+				ADBCBDE52D77B07400EEF82F /* GamePresenterProtocol.swift */,
+				ADBCBDE32D77AE5E00EEF82F /* GameViewProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		ADC5996F2D7F8CE600027A12 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				ADC599702D7F8CF600027A12 /* FirebaseDatabaseManagerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		ADE8EF7E2D7C9F2100E9F914 /* TradingElements */ = {
+			isa = PBXGroup;
+			children = (
+				ADE8EF7C2D7C9ED300E9F914 /* PropertiesTableView.swift */,
+				AD58A1922D56A76C005A4E16 /* PlayerTradeView.swift */,
+				ADE8EF7A2D7C9E2500E9F914 /* MoneyInputView.swift */,
+				AD0C18392D5634CF000390F1 /* TradeView.swift */,
+				AD58A1942D56A961005A4E16 /* PropertyCell.swift */,
+			);
+			path = TradingElements;
+			sourceTree = "<group>";
+		};
+		ADE8EF872D7CD48C00E9F914 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				ADE8EF812D7CCD1500E9F914 /* LogTableView.swift */,
+				ADE8EF832D7CCD4E00E9F914 /* LogCell.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		ADE8EF922D7E323E00E9F914 /* EndGame */ = {
+			isa = PBXGroup;
+			children = (
+				AD5275872D74E5A600703A15 /* EndGameScreen.swift */,
+			);
+			path = EndGame;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADA3ED692D51666F009DD046 /* Fox Monopoly Online */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA3ED972D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly Online" */;
+			buildPhases = (
+				ADA3ED662D51666F009DD046 /* Sources */,
+				ADA3ED672D51666F009DD046 /* Frameworks */,
+				ADA3ED682D51666F009DD046 /* Resources */,
+				AD547BA92D750333004778A5 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fox Monopoly Online";
+			packageProductDependencies = (
+				ADA3EDA32D516784009DD046 /* FirebaseAuth */,
+				ADA3EDA52D516784009DD046 /* FirebaseCore */,
+				ADA3EDA72D516784009DD046 /* FirebaseDatabase */,
+				ADA3EDA92D516924009DD046 /* FirebaseFirestore */,
+				ADA3EDAB2D516924009DD046 /* FirebaseStorage */,
+				AD5E75162D52124300831BBD /* GoogleSignIn */,
+				AD5E75182D52124300831BBD /* GoogleSignInSwift */,
+				AD547BA42D750322004778A5 /* Lottie */,
+			);
+			productName = "Fox Monopoly Online";
+			productReference = ADA3ED6A2D51666F009DD046 /* Fox Monopoly Online.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADA3ED822D516670009DD046 /* Fox Monopoly OnlineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA3ED9A2D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly OnlineTests" */;
+			buildPhases = (
+				ADA3ED7F2D516670009DD046 /* Sources */,
+				ADA3ED802D516670009DD046 /* Frameworks */,
+				ADA3ED812D516670009DD046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA3ED852D516670009DD046 /* PBXTargetDependency */,
+			);
+			name = "Fox Monopoly OnlineTests";
+			productName = "Fox Monopoly OnlineTests";
+			productReference = ADA3ED832D516670009DD046 /* Fox Monopoly OnlineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADA3ED8C2D516670009DD046 /* Fox Monopoly OnlineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADA3ED9D2D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly OnlineUITests" */;
+			buildPhases = (
+				ADA3ED892D516670009DD046 /* Sources */,
+				ADA3ED8A2D516670009DD046 /* Frameworks */,
+				ADA3ED8B2D516670009DD046 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADA3ED8F2D516670009DD046 /* PBXTargetDependency */,
+			);
+			name = "Fox Monopoly OnlineUITests";
+			productName = "Fox Monopoly OnlineUITests";
+			productReference = ADA3ED8D2D516670009DD046 /* Fox Monopoly OnlineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADA3ED622D51666F009DD046 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					ADA3ED692D51666F009DD046 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					ADA3ED822D516670009DD046 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = ADA3ED692D51666F009DD046;
+					};
+					ADA3ED8C2D516670009DD046 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = ADA3ED692D51666F009DD046;
+					};
+				};
+			};
+			buildConfigurationList = ADA3ED652D51666F009DD046 /* Build configuration list for PBXProject "Fox Monopoly Online" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = ADA3ED612D51666F009DD046;
+			packageReferences = (
+				ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AD5E75152D52124300831BBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				AD547BA32D7502A3004778A5 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
+			productRefGroup = ADA3ED6B2D51666F009DD046 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADA3ED692D51666F009DD046 /* Fox Monopoly Online */,
+				ADA3ED822D516670009DD046 /* Fox Monopoly OnlineTests */,
+				ADA3ED8C2D516670009DD046 /* Fox Monopoly OnlineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADA3ED682D51666F009DD046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA3ED7A2D516670009DD046 /* Assets.xcassets in Resources */,
+				AD547BAB2D750409004778A5 /* Animation.json in Resources */,
+				AD547BB22D750B9D004778A5 /* LaunchScreen.storyboard in Resources */,
+				AD5E751F2D52192C00831BBD /* GoogleService-Info.plist in Resources */,
+				AD547BAF2D75080D004778A5 /* Fox.json in Resources */,
+				AD1A75902D7627D6003A1C99 /* Money.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED812D516670009DD046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED8B2D516670009DD046 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADA3ED662D51666F009DD046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD5D04212D75D74C00229869 /* LobbyAssembly.swift in Sources */,
+				AD61AF2B2D5BE86800DA78AA /* PlayerManager.swift in Sources */,
+				AD5D041D2D75D73C00229869 /* LobbyInteractor.swift in Sources */,
+				AD61AF222D5BE52900DA78AA /* Property.swift in Sources */,
+				AD2E3EE22D54189100E6794A /* PlayerCell.swift in Sources */,
+				AD58A1932D56A76C005A4E16 /* PlayerTradeView.swift in Sources */,
+				ADA3EDAE2D5169A8009DD046 /* GameViewController.swift in Sources */,
+				AD1A75962D762972003A1C99 /* WaitingRoomCoordinator.swift in Sources */,
+				AD5E75232D521E6E00831BBD /* WaitingRoomViewController.swift in Sources */,
+				AD2E3ED82D53C93800E6794A /* GameModel.swift in Sources */,
+				AD5E752B2D52CAEE00831BBD /* StreetsView.swift in Sources */,
+				ADE8EF822D7CCD1600E9F914 /* LogTableView.swift in Sources */,
+				ADC599712D7F8CF700027A12 /* FirebaseDatabaseManagerProtocol.swift in Sources */,
+				AD899E6C2D5FE67400EA2255 /* ChanceModel.swift in Sources */,
+				ADC599732D7F94B000027A12 /* GameInteractorProtocol.swift in Sources */,
+				AD61AF242D5BE56F00DA78AA /* PropertyType.swift in Sources */,
+				ADE8EF912D7DD90D00E9F914 /* PositioningService.swift in Sources */,
+				AD2E3ED22D53C87F00E6794A /* GameInteractor.swift in Sources */,
+				AD1A75982D762983003A1C99 /* WaitingRoomFactory.swift in Sources */,
+				ADB0360F2D7BAE0A001A046D /* SelfSizingTableView.swift in Sources */,
+				ADBCBDCA2D77544000EEF82F /* LobbyErrors.swift in Sources */,
+				ADB036152D7BB033001A046D /* TradeSectionView.swift in Sources */,
+				AD07C40E2D735E0A000BC9F2 /* AlertManager.swift in Sources */,
+				AD07C40C2D735BBD000BC9F2 /* PaymentManager.swift in Sources */,
+				ADBCBDD52D777C0000EEF82F /* GameErrors.swift in Sources */,
+				AD5D041F2D75D74400229869 /* LobbyPresenter.swift in Sources */,
+				ADE8EF8F2D7CEBE000E9F914 /* DataSource.swift in Sources */,
+				ADAF62C52D5A6FED0006F2BB /* AlertView.swift in Sources */,
+				AD1A75862D761344003A1C99 /* BaseCoordinator.swift in Sources */,
+				AD5E751B2D52139500831BBD /* AuthManager.swift in Sources */,
+				AD5E75292D52C91A00831BBD /* StreetsRightView.swift in Sources */,
+				ADC5996E2D7F881F00027A12 /* FirebaseErrors.swift in Sources */,
+				AD07C4102D735FD3000BC9F2 /* AuctionManager.swift in Sources */,
+				ADBCBDD32D7776D100EEF82F /* GameFactory.swift in Sources */,
+				AD1A75822D75FD2E003A1C99 /* LobbyModel.swift in Sources */,
+				AD899E6A2D5FC82D00EA2255 /* TradeViewModel.swift in Sources */,
+				AD5E752F2D52CDD600831BBD /* SquareView.swift in Sources */,
+				ADBCBDCD2D7760C000EEF82F /* DependenciesAssembly.swift in Sources */,
+				ADB036112D7BAE69001A046D /* ActionButton.swift in Sources */,
+				AD07C40A2D734F08000BC9F2 /* FieldManager.swift in Sources */,
+				AD1A75842D761257003A1C99 /* LobbyCoordinator.swift in Sources */,
+				ADE8EF862D7CCD7900E9F914 /* LogManager.swift in Sources */,
+				AD61AF2D2D5BE8A500DA78AA /* PropertyManager.swift in Sources */,
+				AD2E3ED02D53C87000E6794A /* GamePresenter.swift in Sources */,
+				AD1A759A2D76299F003A1C99 /* WaitingRoomAssembly.swift in Sources */,
+				AD1A75882D7614F4003A1C99 /* LobbyFactory.swift in Sources */,
+				AD1A75922D762930003A1C99 /* WaitingRoomPresenter.swift in Sources */,
+				AD61AF292D5BE83400DA78AA /* DiceService.swift in Sources */,
+				ADA3ED6E2D51666F009DD046 /* AppDelegate.swift in Sources */,
+				AD5275862D74C94400703A15 /* StreetsLeftView.swift in Sources */,
+				ADBCBDD12D77760B00EEF82F /* GameCoordinator.swift in Sources */,
+				AD7897ED2D64C6D90047ED7A /* FirebaseDatabaseManager.swift in Sources */,
+				AD2E3ED62D53C8CE00E6794A /* GameAssembly.swift in Sources */,
+				ADBCBDE42D77AE6100EEF82F /* GameViewProtocol.swift in Sources */,
+				ADBCBDE62D77B07A00EEF82F /* GamePresenterProtocol.swift in Sources */,
+				AD5E752D2D52CD2700831BBD /* BoardView.swift in Sources */,
+				AD61AF202D5BE4FE00DA78AA /* Player.swift in Sources */,
+				AD899E6E2D5FE7A100EA2255 /* ChanceManager.swift in Sources */,
+				AD0C183A2D5634CF000390F1 /* TradeView.swift in Sources */,
+				ADB036132D7BAF0E001A046D /* PropertyTradeCell.swift in Sources */,
+				AD58A1952D56A961005A4E16 /* PropertyCell.swift in Sources */,
+				ADE8EF7B2D7C9E2700E9F914 /* MoneyInputView.swift in Sources */,
+				AD1A759C2D762A97003A1C99 /* WaitingRoomModel.swift in Sources */,
+				ADA3ED782D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodeld in Sources */,
+				ADE8EF842D7CCD5000E9F914 /* LogCell.swift in Sources */,
+				AD5275882D74E5B000703A15 /* EndGameScreen.swift in Sources */,
+				ADE8EF7D2D7C9EDD00E9F914 /* PropertiesTableView.swift in Sources */,
+				ADAF62C32D5A35AB0006F2BB /* ProposalViewController.swift in Sources */,
+				AD1A75802D75E6FF003A1C99 /* LobbyViewController.swift in Sources */,
+				ADA3ED702D51666F009DD046 /* SceneDelegate.swift in Sources */,
+				AD07C4122D736F3D000BC9F2 /* TradeManager.swift in Sources */,
+				AD1A75942D762949003A1C99 /* WaitingRoomInteractor.swift in Sources */,
+				AD07C4082D734B16000BC9F2 /* MovementManager.swift in Sources */,
+				AD5E75312D52CF7400831BBD /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED7F2D516670009DD046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA3ED882D516670009DD046 /* Fox_Monopoly_OnlineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADA3ED892D516670009DD046 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADA3ED942D516670009DD046 /* Fox_Monopoly_OnlineUITestsLaunchTests.swift in Sources */,
+				ADA3ED922D516670009DD046 /* Fox_Monopoly_OnlineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADA3ED852D516670009DD046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA3ED692D51666F009DD046 /* Fox Monopoly Online */;
+			targetProxy = ADA3ED842D516670009DD046 /* PBXContainerItemProxy */;
+		};
+		ADA3ED8F2D516670009DD046 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADA3ED692D51666F009DD046 /* Fox Monopoly Online */;
+			targetProxy = ADA3ED8E2D516670009DD046 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		ADA3ED952D516670009DD046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADA3ED962D516670009DD046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADA3ED982D516670009DD046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fox Monopoly Online/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fox.Monopoly.Online;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ADA3ED992D516670009DD046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fox Monopoly Online/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Fox.Monopoly.Online;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ADA3ED9B2D516670009DD046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Fox.Fox-Monopoly-OnlineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fox Monopoly Online.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fox Monopoly Online";
+			};
+			name = Debug;
+		};
+		ADA3ED9C2D516670009DD046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Fox.Fox-Monopoly-OnlineTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fox Monopoly Online.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fox Monopoly Online";
+			};
+			name = Release;
+		};
+		ADA3ED9E2D516670009DD046 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Fox.Fox-Monopoly-OnlineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fox Monopoly Online";
+			};
+			name = Debug;
+		};
+		ADA3ED9F2D516670009DD046 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Fox.Fox-Monopoly-OnlineUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Fox Monopoly Online";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADA3ED652D51666F009DD046 /* Build configuration list for PBXProject "Fox Monopoly Online" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA3ED952D516670009DD046 /* Debug */,
+				ADA3ED962D516670009DD046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA3ED972D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly Online" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA3ED982D516670009DD046 /* Debug */,
+				ADA3ED992D516670009DD046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA3ED9A2D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly OnlineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA3ED9B2D516670009DD046 /* Debug */,
+				ADA3ED9C2D516670009DD046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADA3ED9D2D516670009DD046 /* Build configuration list for PBXNativeTarget "Fox Monopoly OnlineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADA3ED9E2D516670009DD046 /* Debug */,
+				ADA3ED9F2D516670009DD046 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AD547BA32D7502A3004778A5 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.1;
+			};
+		};
+		AD5E75152D52124300831BBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+		ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.8.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AD547BA42D750322004778A5 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD547BA32D7502A3004778A5 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+		AD5E75162D52124300831BBD /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD5E75152D52124300831BBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		AD5E75182D52124300831BBD /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD5E75152D52124300831BBD /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		ADA3EDA32D516784009DD046 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		ADA3EDA52D516784009DD046 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		ADA3EDA72D516784009DD046 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		ADA3EDA92D516924009DD046 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		ADA3EDAB2D516924009DD046 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ADA3EDA22D516784009DD046 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		ADA3ED762D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ADA3ED772D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodel */,
+			);
+			currentVersion = ADA3ED772D51666F009DD046 /* Fox_Monopoly_Online.xcdatamodel */;
+			path = Fox_Monopoly_Online.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = ADA3ED622D51666F009DD046 /* Project object */;
+}
