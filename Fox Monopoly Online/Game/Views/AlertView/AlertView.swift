@@ -36,6 +36,8 @@ final class AlertView: UIView {
         label.textColor = .greys
         label.numberOfLines = .zero
         label.font = .systemFont(ofSize: Constants.titleFontSize, weight: .bold)
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -87,7 +89,7 @@ final class AlertView: UIView {
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: Constants.verticalPadding),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.horizontalPadding),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -Constants.horizontalPadding),
-            titleLabel.heightAnchor.constraint(equalToConstant: Constants.titleHeight),
+            titleLabel.heightAnchor.constraint(greaterThanOrEqualToConstant: Constants.titleHeight),
 
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.verticalPadding),
             messageLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.horizontalPadding),
@@ -170,7 +172,7 @@ final class AlertView: UIView {
     }
 
     func updatePayButtonInAlert() {
-        if titleLabel.text == Constants.insufficientFundsTitle || titleLabel.text == Constants.jailTitle {
+        if let titleText = titleLabel.text, titleText.contains(Constants.insufficientFundsTitle) || titleText.contains(Constants.jailTitle) {
             leftButton.isEnabled = true
             leftButton.backgroundColor = .acceptButton
         }

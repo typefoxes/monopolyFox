@@ -20,7 +20,7 @@ protocol WaitingRoomAssemblyProtocol: AnyObject {
 final class WaitingRoomAssembly: WaitingRoomAssemblyProtocol {
 
     func createScreen(gameId: String, delegate: WaitingRoomScreenDelegate) -> UIViewController {
-        var dependencies: DependenciesAssemblyProtocol = DependenciesAssembly(gameId: gameId)
+        let dependencies: DependenciesAssemblyProtocol = DependenciesAssembly(gameId: gameId)
 
         let presenter = WaitingRoomPresenterImpl()
         let interactor = WaitingRoomInteractorImpl(

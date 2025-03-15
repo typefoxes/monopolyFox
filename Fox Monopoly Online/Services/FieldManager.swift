@@ -74,38 +74,34 @@ final class FieldManager: FieldManagerProtocol {
     func handleStartProperty(steps: Int) {
         let currentPlayer = playerManager.getCurrentPlayer()
         let totalCells = Constants.totalCells
+        var bonusAmount: Int = .zero
 
         if currentPlayer.isMoveBack {
             if currentPlayer.position - steps <= .zero && currentPlayer.position != 0 {
-                updatePlayerBonus(
-                    player: currentPlayer,
-                    amount: Constants.passStart,
-                    message: Constants.passedStart
-                )
+                bonusAmount += Constants.passStart
             }
+
             if currentPlayer.position - steps == .zero {
-                updatePlayerBonus(
-                    player: currentPlayer,
-                    amount: Constants.landOnStart,
-                    message: Constants.landedOnStart
-                )
+                bonusAmount += Constants.landOnStart
             }
         } else {
             if currentPlayer.position + steps >= totalCells {
-                updatePlayerBonus(
-                    player: currentPlayer,
-                    amount: Constants.passStart,
-                    message: Constants.passedStart
-                )
+                bonusAmount += Constants.passStart
             }
 
             if currentPlayer.position + steps == totalCells {
-                updatePlayerBonus(
-                    player: currentPlayer,
-                    amount: Constants.landOnStart,
-                    message: Constants.landedOnStart
-                )
+                bonusAmount += Constants.landOnStart
             }
+        }
+
+        let message =  bonusAmount > Constants.passStart ?  Constants.landedOnStart : Constants.passedStart
+
+        if bonusAmount > .zero {
+            updatePlayerBonus(
+                player: currentPlayer,
+                amount: bonusAmount,
+                message: message
+            )
         }
     }
 
@@ -142,6 +138,7 @@ final class FieldManager: FieldManagerProtocol {
         databaseManager.updatePlayerMoney(playerID: player.id, money: player.money + amount) { [weak self] result in
             self?.handleDatabaseResult(result)
         }
+
         databaseManager.updateLog(
             message: String(format: message, player.name, amount)
         ) { [weak self] result in
@@ -217,6 +214,10 @@ final class FieldManager: FieldManagerProtocol {
                 )
             }
         } else {
+            databaseManager.updateLog(message: "У \(player.name) недостаточно средств на покупку \(property.name). Начинаем аукцион.") { result in
+                self.handleDatabaseResult(result)
+            }
+
             auctionManager.startAuction(for: property, nextTurn: nextTurn)
         }
     }

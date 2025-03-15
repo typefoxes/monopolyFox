@@ -33,12 +33,10 @@ protocol PropertyManagerProtocol {
     func updatePropertyBuildings(propertyId: Int, buildings: Int)
     /// Заложить объект
     /// - Parameter propertyId: идентификатор объекта
-    /// - Returns: сумма денег за залог
-    func mortgageProperty(propertyId: Int) -> Int
+    func mortgageProperty(propertyId: Int)
     /// Выкупить объект
     /// - Parameter propertyId: идентификатор объекта
-    /// - Returns: Сумма денег на выкуп
-    func redeemProperty(propertyId: Int) -> Int
+    func redeemProperty(propertyId: Int)
     /// Получить все объекты поля
     /// - Returns: массив объектов
     func getAllProperties() -> [Property]
@@ -111,20 +109,16 @@ final class PropertyManager: PropertyManagerProtocol {
         }
     }
 
-    func mortgageProperty(propertyId: Int) -> Int {
+    func mortgageProperty(propertyId: Int) {
         if let index = properties.firstIndex(where: { $0.position == propertyId }) {
             properties[index].active = false
-            return properties[index].lockMoney
         }
-        return .zero
     }
 
-    func redeemProperty(propertyId: Int) -> Int {
+    func redeemProperty(propertyId: Int) {
         if let index = properties.firstIndex(where: { $0.position == propertyId }) {
             properties[index].active = true
-            return properties[index].rebuyMoney
         }
-        return .zero
     }
 
     func getAllProperties() -> [Property] {

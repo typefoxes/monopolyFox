@@ -954,6 +954,7 @@
 				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fox Monopoly Online/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Board Game";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -984,6 +985,7 @@
 				DEVELOPMENT_TEAM = 7U3Z29D5Y3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Fox Monopoly Online/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Board Game";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

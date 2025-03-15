@@ -21,16 +21,9 @@ final class WinnerViewController: UIViewController {
         static let winnerTextFormat = "Победитель:\n%@"
         static let closeButtonTitle = "Завершить игру"
         static let animationName = "Animation"
-        static let winnerLabelFontSize: CGFloat = 32
-        static let closeButtonFontSize: CGFloat = 20
-        static let winnerLabelWeights: UIFont.Weight = .bold
-        static let closeButtonWeights: UIFont.Weight = .medium
         static let textColor = UIColor.white
-        static let closeButtonTextColor = UIColor.white
-        static let closeButtonBackgroundColor = UIColor.systemBlue
         static let buttonWidth: CGFloat = 200
         static let buttonHeight: CGFloat = 50
-        static let buttonCornerRadius: CGFloat = 10
         static let closeButtonBottomInset: CGFloat = -40
         static let labelHorizontalInset: CGFloat = 1
     }

@@ -97,14 +97,24 @@ final class FirebaseDatabaseManager: FirebaseDatabaseManagerProtocol {
         }
 
         let ref = database.child("games").child(gameID).child("properties").child("redeem")
-        let handle = ref.observe(.childChanged) { snapshot in
+
+        let handleAdded = ref.observe(.childAdded) { snapshot in
             guard let propertyId = Int(snapshot.key) else {
                 completion(.failure(.invalidPropertyData))
                 return
             }
             completion(.success(propertyId))
         }
-        observers.append(handle)
+
+        let handleChanged = ref.observe(.childChanged) { snapshot in
+            guard let propertyId = Int(snapshot.key) else {
+                completion(.failure(.invalidPropertyData))
+                return
+            }
+            completion(.success(propertyId))
+        }
+
+        observers.append(contentsOf: [handleAdded, handleChanged])
     }
 
     func observePropertyMortgage(completion: @escaping (Result<Int, FirebaseDatabaseManagerError>) -> Void) {
@@ -114,14 +124,23 @@ final class FirebaseDatabaseManager: FirebaseDatabaseManagerProtocol {
         }
 
         let ref = database.child("games").child(gameID).child("properties").child("mortgage")
-        let handle = ref.observe(.childChanged) { snapshot in
+        let handleAdded = ref.observe(.childAdded) { snapshot in
             guard let propertyId = Int(snapshot.key) else {
                 completion(.failure(.invalidPropertyData))
                 return
             }
             completion(.success(propertyId))
         }
-        observers.append(handle)
+
+        let handleChanged = ref.observe(.childChanged) { snapshot in
+            guard let propertyId = Int(snapshot.key) else {
+                completion(.failure(.invalidPropertyData))
+                return
+            }
+            completion(.success(propertyId))
+        }
+
+        observers.append(contentsOf: [handleAdded, handleChanged])
     }
 
     func observePropertyHotels(completion: @escaping (Result<HotelsData, FirebaseDatabaseManagerError>) -> Void) {

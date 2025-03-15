@@ -348,33 +348,19 @@ final class GameInteractorImpl {
     private func handlePropertyRedeem(propertyId: Int) {
         guard let property = propertyManager.getProperty(at: propertyId) else { return }
         let currentPlayer = playerManager.getCurrentPlayer()
-
-        if currentPlayer.money >= property.rebuyMoney {
-            let money = propertyManager.redeemProperty(propertyId: propertyId)
-            databaseManager.updatePlayerMoney(playerID: currentPlayer.id, money: currentPlayer.money - money) { [weak self] result in
-                self?.handleDatabaseResult(result)
-            }
-
+        propertyManager.redeemProperty(propertyId: propertyId)
             databaseManager.updateLog(message: "\(currentPlayer.name) \(Constants.propertyRedeemed) \(property.name)") { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
 
             presenter.updateAllProperties()
             presenter.updatePlayersInformation()
-        } else {
-            databaseManager.updateLog(message: Constants.insufficientFunds) { [weak self] result in
-                self?.handleDatabaseResult(result)
-            }
-        }
     }
 
     private func handlePropertyMortgage(propertyId: Int) {
         guard let property = propertyManager.getProperty(at: propertyId) else { return }
         let currentPlayer = playerManager.getCurrentPlayer()
-        let money = propertyManager.mortgageProperty(propertyId: property.position)
-        databaseManager.updatePlayerMoney(playerID: currentPlayer.id, money: currentPlayer.money + money) { [weak self] result in
-            self?.handleDatabaseResult(result)
-        }
+        propertyManager.mortgageProperty(propertyId: propertyId)
         presenter.updatePlayersInformation()
         presenter.updateAllProperties()
         databaseManager.updateLog(message: "\(currentPlayer.name) \(Constants.propertyMortgaged) \(property.name)") { [weak self] result in
@@ -509,29 +495,31 @@ final class GameInteractorImpl {
             sourceView: sourceView,
             activePlayer: activePlayer,
             buildAction: canBuild ? { [weak self] in
-                guard let self else { return }
-                propertyManager.writeBuild(property)
-                databaseManager.updatePropertyHotels(propertyId: property.position, hotels: +Constants.hotelValue) { [weak self] result in
+                self?.propertyManager.writeBuild(property)
+                self?.databaseManager.updatePropertyHotels(propertyId: property.position, hotels: +Constants.hotelValue) { [weak self] result in
                     self?.handleDatabaseResult(result)
                 }
             } : nil,
             sellAction: propertyManager.canSellBuild(on: property) ? { [weak self] in
-                guard let self else { return }
-                databaseManager.updatePropertyHotels(propertyId: property.position, hotels: -Constants.hotelValue) { [weak self] result in
+                self?.databaseManager.updatePropertyHotels(propertyId: property.position, hotels: -Constants.hotelValue) { [weak self] result in
                     self?.handleDatabaseResult(result)
+                    self?.presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
                 }
-                presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
             } : nil,
             mortgageAction: (property.active && property.buildings == .zero && propertyManager.canMortgage(property)) ? { [weak self] in
-                guard let self else { return }
-                databaseManager.updatePropertyMortgage(propertyId: property.position) { [weak self] result in
+                self?.databaseManager.updatePlayerMoney(playerID: activePlayer.id, money: activePlayer.money + property.lockMoney) { [weak self] result in
                     self?.handleDatabaseResult(result)
                 }
-                presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
+                self?.databaseManager.updatePropertyMortgage(propertyId: property.position) { [weak self] result in
+                    self?.handleDatabaseResult(result)
+                    self?.presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
+                }
             } : nil,
-            redeemAction: !property.active ? { [weak self] in
-                guard let self else { return }
-                databaseManager.updatePropertyRedeem(propertyId: property.position) { [weak self] result in
+            redeemAction: !property.active && activePlayer.money >= property.rebuyMoney ? { [weak self] in
+                self?.databaseManager.updatePlayerMoney(playerID: activePlayer.id, money: activePlayer.money - property.rebuyMoney) { [weak self] result in
+                    self?.handleDatabaseResult(result)
+                }
+                self?.databaseManager.updatePropertyRedeem(propertyId: property.position) { [weak self] result in
                     self?.handleDatabaseResult(result)
                 }
             } : nil

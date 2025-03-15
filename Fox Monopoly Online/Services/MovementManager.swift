@@ -96,12 +96,15 @@ final class MovementManager: MovementManagerProtocol {
             databaseManager.updateLog(message: Constants.threeDoubles) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
+
             databaseManager.updatePlayerInJail(currentPlayer.id) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
+
             databaseManager.updatePlayerPosition(playerID: currentPlayer.id, position: Constants.jail) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
+
             diceService.resetDoubles()
             nextTurn()
             return
