@@ -31,7 +31,6 @@ final class AuctionManager: AuctionManagerProtocol {
         static let buyButtonTitle = "Купить"
         static let bidIncrement = 100
         static let onePlayer = 1
-        static let errorTitle = "Ошибка"
     }
 
     // MARK: - Private properties
@@ -166,11 +165,13 @@ final class AuctionManager: AuctionManagerProtocol {
             self.databaseManager.updateLog(message: String(format: Constants.dropOutLogMessage, player.name)) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
+
             databaseManager.updateAuction(auctionDataUpdate) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
             return
         }
+
         if player.id == playerManager.getCurrentUserId() {
             alertManager.showTurnAuctionAlert(
                 property: property,
@@ -187,9 +188,14 @@ final class AuctionManager: AuctionManagerProtocol {
                             $0.element.id
                         },
                         currentBidderIndex: index)
-                    self.databaseManager.updateLog(message: String(format: Constants.raiseBidLogMessage, player.name, auctionData.currentBid + Constants.bidIncrement)) { [weak self] result in
+                    self.databaseManager.updateLog(message: String(
+                        format: Constants.raiseBidLogMessage,
+                        player.name,
+                        auctionData.currentBid + Constants.bidIncrement
+                    )) { [weak self] result in
                         self?.handleDatabaseResult(result)
                     }
+
                     self.databaseManager.updateAuction(auctionDataUpdated) { [weak self] result in
                         self?.handleDatabaseResult(result)
                     }
@@ -202,9 +208,11 @@ final class AuctionManager: AuctionManagerProtocol {
                         auctionPlayers: auctionPlayers.map {
                             $0.element.id
                         })
+
                     self.databaseManager.updateLog(message: String(format: Constants.refuseLogMessage, player.name)) { [weak self] result in
                         self?.handleDatabaseResult(result)
                     }
+
                     self.databaseManager.updateAuction(auctionDataUpdate) { [weak self] result in
                         self?.handleDatabaseResult(result)
                     }
@@ -217,12 +225,15 @@ final class AuctionManager: AuctionManagerProtocol {
         databaseManager.updatePlayerMoney(playerID: winner.id, money: winner.money - bid) { [weak self] result in
             self?.handleDatabaseResult(result)
         }
+
         databaseManager.updatePropertyOwner(propertyId: property.position, ownerId: winner.id) { [weak self] result in
             self?.handleDatabaseResult(result)
         }
+
         databaseManager.updateLog(message: String(format: Constants.winnerLogMessage, winner.name, property.name, bid)) { [weak self] result in
             self?.handleDatabaseResult(result)
         }
+
         nextTurn()
     }
 

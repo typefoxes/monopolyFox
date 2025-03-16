@@ -41,7 +41,7 @@ final class MovementManager: MovementManagerProtocol {
         static let totalCells = 40
         static let lastCellIndex = 39
         static let bailAmount = 500
-        static let maxAttempts = 3
+        static let maxAttempts = 2
         static let one = 1
     }
 

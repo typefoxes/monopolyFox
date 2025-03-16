@@ -80,7 +80,6 @@ final class PropertyManager: PropertyManagerProtocol {
     // MARK: - Private properties
 
     private var properties: [Property] = PropertyType.allCases.map { Property(type: $0) }
-    private var hasBuiltThisTurn: [PropertyType: Bool] = [:]
 
     // MARK: - PropertyManagerProtocol
 
@@ -126,23 +125,20 @@ final class PropertyManager: PropertyManagerProtocol {
     }
 
     func surrender(playerId: String) {
-        properties = properties.map {
-            var updatedProperty = $0
-
-            if updatedProperty.owner == playerId {
-                updatedProperty.owner = nil
-                updatedProperty.fieldColor = .white
-                updatedProperty.active = true
-                updatedProperty.buildings = .zero
+        properties.forEach {
+            if $0.owner == playerId {
+                $0.owner = nil
+                $0.fieldColor = .white
+                $0.active = true
+                $0.buildings = .zero
             }
-            return updatedProperty
         }
     }
 
     func canBuild(on property: Property) -> Bool {
         guard let group = property.group,
               property.canUpgrade,
-              hasBuiltThisTurn[property.group?.first ?? property.type] != true,
+              !property.hasBuiltThisTurn,
               let currentOwnerId = property.owner else {
             return false
         }
@@ -169,15 +165,15 @@ final class PropertyManager: PropertyManagerProtocol {
     }
 
     func resetBuiltThisTurn() {
-        hasBuiltThisTurn.removeAll()
+        properties.forEach { $0.hasBuiltThisTurn = false }
     }
 
     func writeBuild(_ property: Property) {
-        if let group = property.group {
-            for type in group {
-                hasBuiltThisTurn[type] = true
-            }
-        }
+        guard let group = property.group else { return }
+
+        properties
+            .filter { group.contains($0.type) }
+            .forEach { $0.hasBuiltThisTurn = true }
     }
 
     func shouldAddToOffer(selectedProperty: Property) -> Bool {

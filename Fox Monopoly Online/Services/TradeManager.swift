@@ -16,6 +16,8 @@ final class TradeManager: TradeManagerProtocol {
 
     private enum Constants {
         static let tradeEnded = "🎉 Сделка завершена между %@ и %@!"
+        static let tradeDetails = "%@ получает %@ и %@k.\n%@ получает %@ и %@k."
+        static let nothing = "ничего"
     }
 
     // MARK: - Private properties
@@ -54,12 +56,18 @@ final class TradeManager: TradeManagerProtocol {
                 self?.handleDatabaseResult(result)
             }
         }
+
         if let fromPlayerMoney = playerManager.findPlayer(id: model.fromPlayer.id)?.money {
             databaseManager.updatePlayerMoney(playerID: model.fromPlayer.id, money: fromPlayerMoney - model.fromPlayerMoney + model.toPlayerMoney) { [weak self] result in
                 self?.handleDatabaseResult(result)
             }
         }
+
         databaseManager.updateLog(message: String(format: Constants.tradeEnded, model.fromPlayer.name, model.toPlayer.name)) { [weak self] result in
+            self?.handleDatabaseResult(result)
+        }
+
+        databaseManager.updateLog(message: createMessage(model: model)) { [weak self] result in
             self?.handleDatabaseResult(result)
         }
     }
@@ -73,5 +81,20 @@ final class TradeManager: TradeManagerProtocol {
             case .success:
                 break
         }
+    }
+
+    private func createMessage(model: TradeViewModel) -> String {
+        let toPlayerReceives = model.fromPlayerProperties?.compactMap { $0.name }.joined(separator: ", ") ?? Constants.nothing
+        let fromPlayerReceives = model.toPlayerProperties?.compactMap { $0.name }.joined(separator: ", ") ?? Constants.nothing
+
+        return String(
+            format: Constants.tradeDetails,
+            model.toPlayer.name,
+            toPlayerReceives,
+            String(model.fromPlayerMoney),
+            model.fromPlayer.name,
+            fromPlayerReceives,
+            String(model.toPlayerMoney)
+        )
     }
 }

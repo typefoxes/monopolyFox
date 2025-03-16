@@ -18,7 +18,7 @@ struct Player: Equatable {
     /// Цвет
     var color: UIColor
     /// Сумма денег
-    var money: Int = 5_000
+    var money: Int = 15_000
     /// Флаг текущего игрока
     var current: Bool
     /// Флаг активности игрока

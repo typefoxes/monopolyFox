@@ -8,7 +8,7 @@
 import UIKit
 
 /// Модель данных собственности
-struct Property: Equatable, Hashable {
+class Property: Equatable, Hashable {
     /// Тип
     let type: PropertyType
     /// Владелец
@@ -41,6 +41,12 @@ struct Property: Equatable, Hashable {
     var cardType: CardTypes { type.data.cardType }
     /// Цена строительства
     var buidPrice: Int { type.data.buidPrice }
+    /// Строился отель за ход
+    var hasBuiltThisTurn: Bool = false
+
+    init(type: PropertyType) {
+        self.type = type
+    }
 
     /// Расчет стоимости и ренты
     func currentLabelValue(properties: [Property]) -> String {
@@ -114,6 +120,14 @@ struct Property: Equatable, Hashable {
         }
 
         return propGroup.count
+    }
+
+    static func == (lhs: Property, rhs: Property) -> Bool {
+        return lhs.type == rhs.type
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(type)
     }
 }
 

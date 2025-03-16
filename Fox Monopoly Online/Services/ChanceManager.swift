@@ -306,12 +306,12 @@ final class ChanceManager: ChanceManagerProtocol {
     private func drawCard(playerName: String) -> ChanceCard {
 
         if cards.isEmpty {
-            cards = usedCards
+            cards = usedCards.shuffled()
             usedCards.removeAll()
         }
 
         let index = Int.random(in: .zero..<cards.count)
-
+        cards = cards.shuffled()
         let card = cards[index]
         cards.remove(at: index)
         usedCards.append(card)

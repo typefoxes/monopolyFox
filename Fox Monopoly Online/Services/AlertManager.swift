@@ -96,6 +96,10 @@ final class AlertManager: AlertManagerProtocol {
         struct Jail {
             static let bailAmount = 500
         }
+
+        struct Auction {
+            static let bid: Int = 100
+        }
     }
 
     // MARK: - Properties
@@ -129,14 +133,21 @@ final class AlertManager: AlertManagerProtocol {
         delegate?.showAlert(model: model, twoButtons: true)
     }
 
-    func showTurnAuctionAlert(property: Property, player: Player, currentBid: Int, buyTitle: String?, completionOk: @escaping () -> Void, completion: @escaping () -> Void) {
+    func showTurnAuctionAlert(
+        property: Property,
+        player: Player,
+        currentBid: Int,
+        buyTitle: String?,
+        completionOk: @escaping () -> Void,
+        completion: @escaping () -> Void
+    ) {
         let messageTemplate = buyTitle != nil ? Constants.Message.auctionWithBuy : Constants.Message.auctionRaise
         let message = String(format: messageTemplate, currentBid, player.name)
 
         let model = AlertModel(
             title: String(format: Constants.Title.auctionTemplate, property.name),
             message: message,
-            leftButtonTitle: buyTitle ?? String(format: Constants.Button.raiseBidTemplate, 100),
+            leftButtonTitle: buyTitle ?? String(format: Constants.Button.raiseBidTemplate, Constants.Auction.bid),
             rightButtonTitle: Constants.Button.refuse,
             actionLeftButton: completionOk,
             actionRightButton: completion,
@@ -147,7 +158,11 @@ final class AlertManager: AlertManagerProtocol {
         delegate?.showAlert(model: model, twoButtons: true)
     }
 
-    func showNoMoneyAlert(amount: Int, payCompletion: @escaping () -> Void, nextTernAction: @escaping () -> Void?) {
+    func showNoMoneyAlert(
+        amount: Int,
+        payCompletion: @escaping () -> Void,
+        nextTernAction: @escaping () -> Void?
+    ) {
         let currentPlayer = playerManager.getCurrentPlayer()
         playerManager.updateAmountDebt(playerId: currentPlayer.id, amount: amount)
 

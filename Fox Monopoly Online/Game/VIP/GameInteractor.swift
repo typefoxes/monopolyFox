@@ -349,12 +349,12 @@ final class GameInteractorImpl {
         guard let property = propertyManager.getProperty(at: propertyId) else { return }
         let currentPlayer = playerManager.getCurrentPlayer()
         propertyManager.redeemProperty(propertyId: propertyId)
-            databaseManager.updateLog(message: "\(currentPlayer.name) \(Constants.propertyRedeemed) \(property.name)") { [weak self] result in
-                self?.handleDatabaseResult(result)
-            }
+        databaseManager.updateLog(message: "\(currentPlayer.name) \(Constants.propertyRedeemed) \(property.name)") { [weak self] result in
+            self?.handleDatabaseResult(result)
+        }
 
-            presenter.updateAllProperties()
-            presenter.updatePlayersInformation()
+        presenter.updateAllProperties()
+        presenter.updatePlayersInformation()
     }
 
     private func handlePropertyMortgage(propertyId: Int) {
@@ -494,18 +494,21 @@ final class GameInteractorImpl {
             property: property,
             sourceView: sourceView,
             activePlayer: activePlayer,
+
             buildAction: canBuild ? { [weak self] in
                 self?.propertyManager.writeBuild(property)
                 self?.databaseManager.updatePropertyHotels(propertyId: property.position, hotels: +Constants.hotelValue) { [weak self] result in
                     self?.handleDatabaseResult(result)
                 }
             } : nil,
+
             sellAction: propertyManager.canSellBuild(on: property) ? { [weak self] in
                 self?.databaseManager.updatePropertyHotels(propertyId: property.position, hotels: -Constants.hotelValue) { [weak self] result in
                     self?.handleDatabaseResult(result)
                     self?.presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
                 }
             } : nil,
+
             mortgageAction: (property.active && property.buildings == .zero && propertyManager.canMortgage(property)) ? { [weak self] in
                 self?.databaseManager.updatePlayerMoney(playerID: activePlayer.id, money: activePlayer.money + property.lockMoney) { [weak self] result in
                     self?.handleDatabaseResult(result)
@@ -515,6 +518,7 @@ final class GameInteractorImpl {
                     self?.presenter.updatePayButtonInAlert(amount: activePlayer.amountDebt)
                 }
             } : nil,
+
             redeemAction: !property.active && activePlayer.money >= property.rebuyMoney ? { [weak self] in
                 self?.databaseManager.updatePlayerMoney(playerID: activePlayer.id, money: activePlayer.money - property.rebuyMoney) { [weak self] result in
                     self?.handleDatabaseResult(result)
